@@ -4,10 +4,52 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog
 from PyQt5.QtGui import QPixmap
 
 
+
 class Redimensionar(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         super().setupUi(self)
+
+        self.setStyleSheet(
+            '* {background:  	#F0E68C}' ) # Formatação em CSS
+
+        self.btn_redimensionar.setStyleSheet(
+         '* {background: Chartreuse}'
+        )
+
+        self.btn_salvar.setStyleSheet(
+         '* {background: tomato}'
+        )
+
+        self.btn_escolher.setStyleSheet(
+            '* {background: Chartreuse}'
+        )
+        self.scrollArea.setStyleSheet(
+            '* {background: black}'
+        )
+
+        self.scrollAreaWidgetContents.setStyleSheet(
+            '*{background: white}'
+
+        )
+        self.input_abrir.setStyleSheet(
+            '*{background: white; color:black}'
+
+        )
+        self.input_abrir.setStyleSheet(
+            '*{background: white; color:black}'
+
+        )
+
+        self.altura.setStyleSheet(
+            '*{background: white; color:black}'
+
+        )
+        self.largura.setStyleSheet(
+            '*{background: white; color:black}'
+
+        )
+
         self.btn_escolher.clicked.connect(self.abrir_imagem)
         self.btn_redimensionar.clicked.connect(self.redimensiona)
         self.btn_salvar.clicked.connect(self.salvar_imagem)
