@@ -86,6 +86,7 @@ class Redimensionar(QMainWindow, Ui_MainWindow):
                                                     # funciona de qualquer jeito, com ou sem.
         )
         self.nova_img.save(imagem, 'PNG')
+        #print('teste')
 
 if __name__ == '__main__':
     qt = QApplication(sys.argv)
